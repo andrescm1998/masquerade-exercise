@@ -1,16 +1,13 @@
-// Send the SQL code to the database that we've connected to
 const fs = require('fs');
-require('dotenv').config();
+require("dotenv").config(); // Load environment config
 
-//Load in the SQL code/ Read the SQL code
-
+// Load in the SQL statements
 const sql = fs.readFileSync('setup.sql').toString();
 
-// Import our database
+// Get a link to the database
+const db = require("./db");
 
-const db = require('./db')
-
-//Run the query - sending the SQL code to the database
+// Run the query
 db.query(sql)
-    .then(data => console.log('Set up complete'))
-    .catch(error => console.log(error))
+    .then(data => console.log("Set-up complete."))
+    .catch(error => console.log(error));
