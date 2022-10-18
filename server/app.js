@@ -11,6 +11,7 @@ app.get('/', (req, res) => {
     console.log('Welcome to the Masquerade API')
 });
 
+app.get('/entities', async (req, res) =)
 
 
 module.exports = app;
