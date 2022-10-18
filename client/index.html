@@ -12,12 +12,44 @@
     <form>
         <label for="table">Choose an option </label>
         <select name="table" id="table">
-            <option value="entity">Entity</option>
-            <option value="location">Location</option>
+            <option value="entities">Entity</option>
+            <option value="locations">Location</option>
         </select>
         <br><br>
         <label for="name">Enter the name: </label>
-        <input id="name" type="text">
+        <input name="value" id="name" type="text" required>
+        <label for="type">Enter the type: </label>
+        <input name="type" id="type" type="text">
+        <input id="submit" type="submit">
     </form>
+    <br><br>
+
+    <form id="incident">
+        <label for="entity">Entity:</label>
+        <select name="entity" id="entity"></select>
+        <select name="location" id="location"></select>
+        <label for="time">Time:</label>
+        <input type="time" name="time" id="time">
+        <label for="severity">Severity:</label>
+        <input type="text" name="severity" id="severity">
+        <br><br>
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        <input type="submit">
+    </form>
+    <br><br>
+    <form id="delete-form">
+        <label for="delete">Choose an option to delete:</label>
+        <select name="delete" id="delete">
+            <option value="entities">Entity</option>
+            <option value="locations">Location</option>
+            <option value="incidents">Incident</option>
+        </select>
+        <label for="option_d">Choose the id of your selected option:</label>
+        <select name="option_d" id="option-d"></select>
+        <input type="submit">
+    </form>
+
+    <ul id="test"></ul>
 </body>
 </html>
